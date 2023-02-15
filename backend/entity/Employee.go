@@ -6,7 +6,7 @@ import (
 
 type Employee struct {
 	gorm.Model
-	Name       string
+	Name       string `valid:"required~Name cannot be blank"`
 	Email      string
 	EmployeeID string
 }
